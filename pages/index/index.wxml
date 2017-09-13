@@ -6,7 +6,7 @@
   </view>
   <view class='btn-group'>
     <button type="primary" bindtap='toNew'>新建</button>
-    <button class='toList' bindtap='toList'>保存列表</button>
+    <button class="toList" bindtap='toList'>保存列表</button>
   </view>
 
 </view>

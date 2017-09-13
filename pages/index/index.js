@@ -24,7 +24,7 @@ Page({
     })
   },
   // 跳转new
-  toNew:function(){
+  toNew(){
     wx.navigateTo({
       url: '../new/new',
     })
