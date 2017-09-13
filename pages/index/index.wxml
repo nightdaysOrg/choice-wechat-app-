@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="title">选择困难</view>
+  <view class='tips'>
+    <view class="tips-title">提示信息</view>
+  </view>
+  <view class='btn-group'>
+    <button type="primary">新建</button>
+    <button class='toList'>保存列表</button>
+  </view>
+
+</view>

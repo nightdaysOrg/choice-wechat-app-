@@ -1,0 +1,22 @@
+.container{
+  background:lightgray;
+}
+.container>.title{
+  font-size:2em;
+}
+.btn-group{
+  display: flex;
+  justify-content: space-between;
+  width:80%;
+}
+.toList{
+  background:orange;
+}
+.tips{
+  display:flex;
+  justify-content: left;
+}
+.tips>.tips-title{
+  text-align: left;
+  font-size: 17px;
+}
