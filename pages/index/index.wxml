@@ -5,8 +5,8 @@
     <view class="tips-title">提示信息</view>
   </view>
   <view class='btn-group'>
-    <button type="primary">新建</button>
-    <button class='toList'>保存列表</button>
+    <button type="primary" bindtap='toNew'>新建</button>
+    <button class='toList' bindtap='toList'>保存列表</button>
   </view>
 
 </view>

@@ -22,5 +22,17 @@ Page({
         userInfo:userInfo
       })
     })
+  },
+  // 跳转new
+  toNew:function(){
+    wx.navigateTo({
+      url: '../new/new',
+    })
+  },
+  // 跳转list
+  toList(){
+    wx.switchTab({
+      url: '../list/list',
+    })
   }
 })
