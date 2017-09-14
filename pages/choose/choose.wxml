@@ -1,2 +1,5 @@
 <!--pages/choose/choose.wxml-->
-<text>pages/choose/choose.wxml</text>
+<view class='container'>
+  <view class='title'>{{allName[index]}}</view>
+  <view class='list' wx:for="{{choiceList}}" wx:key="index">{{item}}</view>
+</view>

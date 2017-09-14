@@ -25,13 +25,13 @@ Page({
   },
   // 跳转new
   toNew(){
-    wx.navigateTo({
+    wx.reLaunch({
       url: '../new/new',
     })
   },
   // 跳转list
   toList(){
-    wx.switchTab({
+    wx.reLaunch({
       url: '../list/list',
     })
   }

@@ -10,7 +10,7 @@
 
     <view class="add-one" wx:for="{{choiceItem}}" wx:key="{{index}}">
     
-      <input type="text" placeholder="请输入第{{index+1}}项" value="{{choiceList[index]||inputValue}}" bindblur="leaveInput"></input>
+      <input type="text" placeholder="请输入第{{index+1}}项" value="{{choiceList[index]||inputValue}}" bindinput="leaveInput"></input>
       <button class="add-btn" bindtap="addOne" disabled='{{!inputValue||choiceList.length!==index}}'>增加</button>
     </view>
 

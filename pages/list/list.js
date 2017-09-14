@@ -30,5 +30,14 @@ Page({
       },
     })
   },
+  toChoice(e){
+    wx.setStorage({
+      key: 'choiceIndex',
+      data: e.currentTarget.dataset,
+    });
+    wx.reLaunch({
+      url: '../choose/choose',
+    })
+  }
 
 })
