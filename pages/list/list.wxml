@@ -1,2 +1,4 @@
 <!--pages/list/list.wxml-->
-<text>pages/list/list.wxml</text>
+<view class="container">
+  <view class="list" wx:for="{{allName}}" wx:key="{{index}}">{{item}}</view>
+</view>

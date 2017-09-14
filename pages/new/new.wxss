@@ -12,7 +12,7 @@ input{
 }
 .choice{
   margin-top:2vh;
-  height:75vh;
+  height:65vh;
   width:80%;
   overflow: auto;
 }
