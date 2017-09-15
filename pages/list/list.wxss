@@ -1,1 +1,10 @@
 /* pages/list/list.wxss */
+.list-group{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+.list{
+  margin-top:3vh;
+}

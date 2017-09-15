@@ -1,5 +1,13 @@
 <!--pages/choose/choose.wxml-->
-<view class='container'>
-  <view class='title'>{{allName[index]}}</view>
-  <view class='list' wx:for="{{choiceList}}" wx:key="index">{{item}}</view>
+<view class="container">
+  <view class="title">{{allName[zindex]}}</view>
+  <view class="listContainer">
+    <view class='list {{index==cindex}}' wx:for="{{choiceList}}" wx:key="index" style="width:{{w}};height:{{h}};background:rgba({{r}},{{g}},{{b}},{{a}})">
+      <text>{{item}}</text>
+    </view>
+  </view>
+  <view class='btn-group'>
+    <button bindtap="choiceClick">让我帮你选</button>
+    <button bindtap='backToList'>返回</button>
+  </view>
 </view>

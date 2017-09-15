@@ -1,9 +1,9 @@
 <!--pages/list/list.wxml-->
 <view class="container">
+<view class='title'>保存列表</view>
   <view class='list-group'>
-    <view class="list" wx:for="{{allName}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="toChoice">
-      <text>帮你选择{{index}}:</text>
+    <button class="list" wx:for="{{allName}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="toChoice" style="background:rgba({{r}},{{g}},{{b}},{{a}})">
       <text>{{item}}</text>
-    </view>
+    </button>
   </view>
 </view>

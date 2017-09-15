@@ -7,6 +7,10 @@ Page({
     choiceList: [],
     allList: [],
     saveAll: {},
+    r: parseInt(Math.random() * 256),
+    g: parseInt(Math.random() * 256),
+    b: parseInt(Math.random() * 256),
+    a: Math.random() * 0.3,
   },
 
   //  * 生命周期函数--监听页面加载
@@ -20,17 +24,17 @@ Page({
     var that = this;
     wx.getStorage({
       key: 'listInfo',
-      success: function(res) {
+      success: function (res) {
         console.log(res.data)
         that.setData({
-          allName:res.data.name,
-          allList:res.data.List,
-          saveAll:res.data
+          allName: res.data.name,
+          allList: res.data.List,
+          saveAll: res.data
         })
       },
     })
   },
-  toChoice(e){
+  toChoice(e) {
     wx.setStorage({
       key: 'choiceIndex',
       data: e.currentTarget.dataset,
