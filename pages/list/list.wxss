@@ -1,4 +1,9 @@
 /* pages/list/list.wxss */
+.listContainer{
+  height:85vh;
+  overflow: auto;
+  width: 100%;
+}
 .list-group{
   display: flex;
   flex-direction: column-reverse;
@@ -7,4 +12,13 @@
 }
 .list{
   margin-top:3vh;
+}
+.title{
+  font-size: 1.75em;
+  font-weight: bold;
+}
+.hasNothing{
+  text-align: center;
+  width:100%;
+  line-height: 85vh;
 }

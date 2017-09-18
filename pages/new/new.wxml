@@ -1,23 +1,20 @@
 <view class='container'>
   <view class='title'>
-    <text>名称 : </text>
     <input type="text" focus='true' placeholder="请输入选择名字..." value="{{cname}}" bindblur="leaveName"></input>
   </view>
   <!-- 主体 -->
-    <view class="c-title">选项↓↓↓</view>
-  
-  <view class="choice">
-
-    <view class="add-one" wx:for="{{choiceItem}}" wx:key="{{index}}">
-    
-      <input type="text" placeholder="请输入第{{index+1}}项" value="{{choiceList[index]||inputValue}}" bindinput="leaveInput"></input>
-      <button class="add-btn" bindtap="addOne" disabled='{{!inputValue||choiceList.length!==index}}'>增加</button>
+  <view class="c-title">选项↓↓↓</view>
+  <view class='choiceContainer'>
+    <view class="choice">
+      <view class="add-one" wx:for="{{choiceItem}}" wx:key="{{index}}">
+        <input type="text" placeholder="请输入第{{index+1}}项" value="{{choiceList[index]||inputValue}}" bindinput="leaveInput"></input>
+        <button class="add-btn" bindtap="addOne" disabled='{{!inputValue||choiceList.length!==index}}'>增加</button>
+      </view>
     </view>
-
   </view>
   <!-- btn -->
   <view class="btn-group">
-    <button type="primary" bindtap="addAll">提交</button>
+    <button style="background:rgba({{r}},{{g}},{{b}},0.5)" bindtap="addAll">提交</button>
     <button type="warn" bindtap="reLaunch">重置</button>
   </view>
 </view>

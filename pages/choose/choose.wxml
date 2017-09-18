@@ -7,7 +7,7 @@
     </view>
   </view>
   <view class='btn-group'>
-    <button bindtap="choiceClick">让我帮你选</button>
+    <button style="background:rgba({{r}},{{g}},{{b}},0.5)" bindtap="choiceClick">让我帮你选</button>
     <button bindtap='backToList'>返回</button>
   </view>
 </view>

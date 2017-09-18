@@ -1,6 +1,5 @@
 // pages/new/new.js
 Page({
-
   //  页面的初始数据
   data: {
     choiceItem: 1,
@@ -10,6 +9,10 @@ Page({
     saveAll: {},
     inputValue: "",
     cname: "",
+    r: parseInt(Math.random() * 256),
+    g: parseInt(Math.random() * 256),
+    b: parseInt(Math.random() * 256),
+    a: Math.random() * 0.3,
   },
 
   // 生命周期函数--监听页面加载
@@ -19,6 +22,11 @@ Page({
   //  生命周期函数--监听页面显示
   onShow: function () {
     var that = this;
+    var r = that.data.r;
+    var g = that.data.g;
+    var b = that.data.b;
+    var a = that.data.a;
+    var color = ('rgba(' + r + ',' + g + ',' + b + ',' + a + ')').toString(16)
     wx.getStorage({
       key: 'listInfo',
       success: function (res) {
@@ -29,6 +37,17 @@ Page({
           allList: res.data.list,
         })
       },
+    });
+    wx.setNavigationBarColor({
+      frontColor: '#000000',
+      backgroundColor: color,
+      animation: {
+        duration: 700,
+        timingFunc: 'easeIn'
+      }
+    });
+    wx.setNavigationBarTitle({
+      title: '新建'
     })
   },
   // 离开输入项目框
@@ -75,6 +94,12 @@ Page({
     var nameArr = that.data.allName;
     var choiceArr = that.data.allList;
     var save = that.data.saveAll;
+    if (that.data.inputValue) {
+      arr.push(that.data.inputValue);
+      that.setData({
+        choiceList: arr,
+      });
+    }
     if (name) {
       nameArr.push(name);
       choiceArr.push(arr);

@@ -1,10 +1,13 @@
 .container{
-  background:lightgray;
+  height:85vh;
 }
 .container>.title{
-  font-size:2em;
+  font-size:1.75em;
+  margin-top:3vh;
 }
 .btn-group{
+  position:fixed;
+  bottom:3vh;
   display: flex;
   justify-content: space-between;
   width:80%;
@@ -13,10 +16,21 @@
   background:orange;
 }
 .tips{
-  display:flex;
-  justify-content: left;
+  margin-top: 7vh;
 }
 .tips>.tips-title{
+  padding-left:5vw;
   text-align: left;
   font-size: 17px;
+}
+.tips>.tips-content{
+  text-indent: 2em;
+  width:90%;
+  text-align: left;
+  margin:0 auto;
+  line-height: 35px;
+}
+.tips>.tips-content2{
+  color:chocolate;
+  margin-bottom:5vh;
 }

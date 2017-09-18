@@ -1,12 +1,18 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="title">选择困难</view>
+  <view class="title">治好你的选择困难症</view>
   <view class='tips'>
-    <view class="tips-title">提示信息</view>
+    <view class="tips-title">简介:</view>
+    <view class="tips-content">又是一个界面简陋的小程序....</view>
+    <view class="tips-content">有那么多同类的程序,为啥要用这个?</view>
+    <view class="tips-content">因为,我这个可以保存历史纪录啊!</view>
+    <view class="tips-content">没有历史纪录,好看不中用啊!!!</view>
+    <view class="tips-title">提示:</view>
+    <view class='tips-content tips-content2'>只有一点需要提示,删除历史纪录请在列表界面长按项目就行了</view>
   </view>
   <view class='btn-group'>
     <button type="primary" bindtap='toNew'>新建</button>
-    <button class="toList" bindtap='toList'>保存列表</button>
+    <button class="toList" style="background:rgba({{r}},{{g}},{{b}},0.5)" bindtap='toList'>保存列表</button>
   </view>
 
 </view>

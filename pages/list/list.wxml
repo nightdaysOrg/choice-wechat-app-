@@ -1,9 +1,12 @@
 <!--pages/list/list.wxml-->
 <view class="container">
-<view class='title'>保存列表</view>
-  <view class='list-group'>
-    <button class="list" wx:for="{{allName}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="toChoice" style="background:rgba({{r}},{{g}},{{b}},{{a}})">
-      <text>{{item}}</text>
-    </button>
+  <view class='title'>历史纪录</view>
+  <view class='listContainer'>
+    <view class='list-group'>
+      <button class="list" wx:for="{{allName}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="toChoice" bindlongpress="deleteClick" style="background:rgba({{r}},{{g}},{{b}},{{a}})">
+        <text>{{item}}</text>
+      </button>
+    </view>
+    <view wx:if="{{allName.length==0}}" class="hasNothing">暂无历史纪录...</view>
   </view>
 </view>

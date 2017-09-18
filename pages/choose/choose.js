@@ -33,11 +33,20 @@ Page({
       that.setData({
         zindex: value2.idx
       })
-    }
+    };
+    wx.setNavigationBarTitle({
+      title: '做选择'
+    })
   },
 
   //  * 生命周期函数--监听页面显示
   onShow: function () {
+    var that=this;
+    var r = that.data.r;
+    var g = that.data.g;
+    var b = that.data.b;
+    var a = that.data.a;
+    var color = ('rgba(' + r + ',' + g + ',' + b + ',' + a + ')').toString(16);
     var arr = this.data.allList;
     var n = parseInt(this.data.zindex);
     this.setData({
@@ -46,8 +55,8 @@ Page({
     var x = this.data.choiceList.length;
     if (x >= 25) {
       this.setData({
-        w: "7.5vh",
-        h: "10vh",
+        w: "7vh",
+        h: "7vh",
       })
     }
     else if (x >= 16) {
@@ -64,10 +73,18 @@ Page({
     }
     else if (x > 0) {
       this.setData({
-        w: "15ch",
-        h: "15vh",
+        w: "14vh",
+        h: "14vh",
       })
-    }
+    };
+    wx.setNavigationBarColor({
+      frontColor: '#000000',
+      backgroundColor: color,
+      animation: {
+        duration: 700,
+        timingFunc: 'easeIn'
+      }
+    })
   },
   // 选择按钮
   choiceClick() {
@@ -82,7 +99,7 @@ Page({
         cindex: x,
       })
       // 结束条件
-      if (i >=  num) {
+      if (i >= 1.3 * num) {
         var arr = that.data.choiceList;
         var str = arr[x];
         // 结束周期定时器
@@ -93,7 +110,7 @@ Page({
           wx.showModal({
             title: '已经帮您选出:',
             content: str,
-            showCancel:false,
+            showCancel: false,
             success: function (res) {
               if (res.confirm) {
                 console.log('用户点击确定')

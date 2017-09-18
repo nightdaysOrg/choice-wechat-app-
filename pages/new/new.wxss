@@ -1,20 +1,29 @@
 /* pages/new/new.wxss */
 .container>.title{
   display: flex;
-  align-items: center;
+  justify-content: center;
   margin-top:2vh; 
+  width:80%;
 }
 input{
   border:1px solid lightgray;
   border-radius: 7px;
   height:4.5vh;
   padding:0.5vh 2vw;
+  text-align:center;
+}
+.choiceContainer{
+  width:100vw;
+  height:65vh;
+  overflow: auto;
 }
 .choice{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: flex-end;
   margin-top:2vh;
-  height:65vh;
-  width:80%;
-  overflow: auto;
+  width:100%;
 }
 .c-title{
   margin-top:2vh;
@@ -26,17 +35,18 @@ input{
   align-items: center;
   justify-content: space-between;
   margin-top:1.5vh;
+  width: 80%;
 }
 .add-one>input{
-  width:70%;
+  width:80%;
 }
 .add-one>button{
   width:20%;
-  padding:0;
   font-size: 0.7em;
-  height:4vh;
-  line-height: 4vh;
+  height:5vh;
+  line-height: 5vh;
   background:lightgreen;
+  margin-left: 2vw;
 }
 .btn-group{
   display:flex;
